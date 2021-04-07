@@ -141,8 +141,9 @@ Your task is
 
 *Note:* the linear system is not full rank; `K` has a one dimensional nullspace corresponding to the constant function. This is because a scalar field can be offset by any constant value without altering its gradient. You will need to fix the value at one vertex (e.g., to zero) to solve the system.
 
+<div align=center><img width=50% height=50% src=img/sf_1.png/><img width=50% height=50% src=img/sf_2.png/></div>
 
-![](img/sf.png?raw=true)
+
 A vector field and the reconstructed scalar function. Note the scalar function gradient's deviation from the input field.
 
 *Relevant `igl` functions:* `grad` calculates the gradient matrix explained above. `doublearea` can be used to compute triangle areas.
