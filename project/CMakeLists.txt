@@ -16,19 +16,18 @@ include_directories(
 )
 
 add_library(${PROJECT_NAME} SHARED
-
     src/fk.cpp
-
 )
 
 
 # Add your project files
 target_link_libraries(${PROJECT_NAME} pinocchio::pinocchio)
+target_link_libraries(${PROJECT_NAME} igl::core igl::opengl_glfw)
 
-# add_executable(bbw ./demos/bbw.cpp)
-# add_executable(tmp ./demos/tmp.cpp)
-# target_link_libraries(bbw igl::core igl::opengl_glfw)
-# target_link_libraries(tmp igl::core igl::opengl_glfw igl::tetgen)
+add_executable(bbw ./demos/bbw.cpp)
+add_executable(tmp ./demos/tmp.cpp)
+target_link_libraries(bbw ${PROJECT_NAME})
+target_link_libraries(tmp igl::core igl::opengl_glfw igl::tetgen)
 
 add_executable(fk_demo ./demos/fk.cpp)
 target_link_libraries(fk_demo ${PROJECT_NAME})
