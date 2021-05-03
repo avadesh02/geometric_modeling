@@ -25,8 +25,10 @@ target_link_libraries(${PROJECT_NAME} pinocchio::pinocchio)
 target_link_libraries(${PROJECT_NAME} igl::core igl::opengl_glfw)
 
 add_executable(bbw ./demos/bbw.cpp)
+add_executable(bbw_cyl ./demos/bbw_cyl.cpp)
 add_executable(tmp ./demos/tmp.cpp)
 target_link_libraries(bbw ${PROJECT_NAME})
+target_link_libraries(bbw_cyl ${PROJECT_NAME})
 target_link_libraries(tmp igl::core igl::opengl_glfw igl::tetgen)
 
 add_executable(fk_demo ./demos/fk.cpp)

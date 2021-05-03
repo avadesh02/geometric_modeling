@@ -28,28 +28,56 @@ Eigen::VectorXi P;
 
 int selected = 0;
 
-std::vector<int> CE_ind = {30770, 28646, 30844, 4001, 3581, 5761, 27125, 31390,  32100, 2038, 2749, 7052};
+std::vector<int> CE_ind = {633, 39664, 32904, 28716, 5931, 3569, 3632, 
+                            32099, 31372, 27125, 7050, 3014, 2040};
 
-std::vector<std::string> joint_names = {"FL_FOOT", "FL_KFE", "FL_HAA", "FR_FOOT", "FR_KFE", "FR_HAA",
-                                        "HL_FOOT", "HL_KFE", "HL_HAA", 
-                                            "HR_FOOT", "HR_KFE", "HR_HAA"};
+std::vector<std::string> joint_names = {"FL_HAA", "FL_KFE", "FL_FOOT", "FR_HAA" ,"FR_KFE", "FR_FOOT",
+                                        "HL_HAA", "HL_KFE", "HL_FOOT", "HR_HAA", "HR_KFE", "HR_FOOT"};
+
 Eigen::VectorXd q;
 std::string rpath = "../data/solo12.urdf";
+
+bool pre_draw(igl::opengl::glfw::Viewer & viewer){
+
+    q[0] += 0.01;    
+    std::string rpath = "../data/solo12.urdf";
+    fk::ForwardKinematics fk(rpath, joint_names, V, CE_ind, BE);
+    MatrixXd CT(CE_ind.size(), V.cols());
+    MatrixXd T_mat(BE.rows()*(V.cols()+1),V.cols());
+
+    fk.compute(q, CT, T_mat);
+    U = M*T_mat;
+    viewer.data().set_vertices(U);
+    viewer.data().set_edges(CT,BE,sea_green);
+}
+
+
+
 int main(int argc, char *argv[]){
 
-    BE.resize(8,2);
-    BE << 0,1, 
+    q.resize(19);
+    q <<  0.2, 0.4, 0.24, 0.0, 0.0, -0.707107, 0.707107, 
+          0.8, 0.8, -1.6, 0.0, 1.5, -1.6, 
+          0.0, -0.8, 1.6, 0.0, -0.8, 1.6;
+
+    BE.resize(12,2);
+    BE << 0,1,
           1,2, 
-          3,4, 
+          2,3,
+          0,4,
           4,5,
-          6,7,
+          5,6,
+          0,7,
           7,8,
-          9,10,
-          10,11;
+          8,9,
+          0,10,
+          10,11,
+          11,12;
 
     igl::readOFF("../data/Dog_v1.off",V,F);
     U = V;
     std::cout << "finished reading ..." << std::endl;
+
     fk::ForwardKinematics fk(rpath, joint_names, V, CE_ind, BE);
     fk.get_C(C);
 
@@ -68,29 +96,16 @@ int main(int argc, char *argv[]){
     igl::normalize_row_sums(W,W);
     igl::lbs_matrix(V,W,M);
 
-
-    q.resize(19);
-    q <<  0.2, 0.4, 0.24, 0.0, 0.0, -0.707107, 0.707107, 
-          0.0, 0.8, -1.6, 0.0, 0.8, -1.6, 
-          0.0, -0.8, 1.6, 0.0, -0.8, 1.6;
-        
-
-    T_mat.resize(BE.rows()*(V.cols()+1),V.cols());
-    CT.resize(CE_ind.size(), V.cols());
-
-    fk.compute(q, CT, T_mat);
-    
-    U = M*T_mat;
-
     igl::opengl::glfw::Viewer viewer;
     viewer.data().set_mesh(U, F);
     // viewer.data().set_data(W.col(selected));
-    viewer.data().set_edges(CT,BE,sea_green);
-    // viewer.data().set_edges(C,BE,sea_green);
-
+    viewer.data().set_edges(C,BE,sea_green);
+    viewer.callback_pre_draw = &pre_draw;
     viewer.data().show_lines = false;
     viewer.data().show_overlay_depth = false;
     viewer.data().line_width = 1;
+    viewer.core().animation_max_fps = 30.;
+    viewer.core().is_animating = true;
     viewer.launch();
 
     return 0;

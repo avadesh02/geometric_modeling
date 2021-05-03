@@ -20,7 +20,6 @@ namespace fk{
             C_.row(i) = V.row(CE_ind[i]);
             T0_[i] = Eigen::Affine3d::Identity();
             T0_[i].translate(Eigen::Vector3d(C_.row(i)));
-            T0_[i] = T0_[i].inverse();
             T_[i] = Eigen::Affine3d::Identity();
         }
         CT_ = C_;
@@ -35,13 +34,14 @@ namespace fk{
         pinocchio::forwardKinematics(rmodel_, rdata_, q);
         pinocchio::updateFramePlacements(rmodel_, rdata_);
         
+        CT.row(0) = C_.row(0);
         for (unsigned i = 0; i < joint_names_.size(); ++i){
             
-            T_[i].translation() = rdata_.oMf[rmodel_.getFrameId(joint_names_[i])].translation();
+            T_[i+1].translation() = rdata_.oMf[rmodel_.getFrameId(joint_names_[i])].translation();
             // T_[i].rotate(rdata_.oMf[rmodel_.getFrameId(joint_names_[i])].rotation());
-            CT.row(i) = Eigen::Vector3d(T_[i].translation());
+            CT.row(i+1) = Eigen::Vector3d(T_[i+1].translation());
             // computing the relative translation vector
-            T_[i] = T_[i]*T0_[i];
+            T_[i+1] = T_[i+1]*T0_[i+1].inverse();
 
         }
 
@@ -50,7 +50,7 @@ namespace fk{
         for(int e = 0;e<BE_.rows();e++)
             {
                 T_mat.block(e*(dim+1),0,dim+1,dim) =
-                    T_[e].matrix().transpose().block(0,0,dim+1,dim);
+                    T_[e+1].matrix().transpose().block(0,0,dim+1,dim);
             }
     };
     

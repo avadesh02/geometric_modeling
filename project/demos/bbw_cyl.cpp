@@ -47,6 +47,57 @@ euler2Quaternion( const double roll,
     return q;
 }
 
+double angle = 0;
+
+bool pre_draw(igl::opengl::glfw::Viewer & viewer){
+
+    Vector3d dist1 = (C.row(1) - C.row(0));
+    Vector3d dist2 = (C.row(2) - C.row(1));
+    Affine3d T0 = Affine3d::Identity();
+    Affine3d T1 = Affine3d::Identity();
+    Affine3d T2 = Affine3d::Identity();
+    Affine3d T3 = Affine3d::Identity();
+
+    T1.translate(dist1); 
+    T3.translate(dist2);
+    
+    angle += 0.1*M_PI;
+
+    T0.rotate(euler2Quaternion(angle/2.0, 0.0, 0.0));
+    T2.rotate(euler2Quaternion(angle, 0.0, 0.0));
+
+    Affine3d T01 = Affine3d::Identity();
+    T01.translate(Vector3d(C.row(1)));    
+    Affine3d T02 = Affine3d::Identity();
+    T02.translate(Vector3d(C.row(2)));
+    Affine3d T_ff1 = T0*T1;
+    Affine3d T_ff2 = T0*T1*T2*T3;
+
+    const int dim = C.cols();
+    MatrixXd T(BE.rows()*(dim+1),dim);
+    for(int e = 0;e<BE.rows();e++)
+    {
+        Affine3d a = Affine3d::Identity();
+        if (e == 0){
+            a = T_ff1*T01.inverse();
+        }
+        if (e == 1){
+            a = T_ff2*T02.inverse();
+        }
+        T.block(e*(dim+1),0,dim+1,dim) =
+            a.matrix().transpose().block(0,0,dim+1,dim);
+
+    }
+    // Compute deformation via LBS as matrix multiplication
+    U = M*T;
+    MatrixXd CT;
+    MatrixXi BET;
+    igl::deform_skeleton(C,BE,T,CT,BET);
+
+    viewer.data().set_vertices(U);
+    viewer.data().set_edges(CT,BET,sea_green);
+};
+    
 
 int main(int argc, char *argv[]){
 
@@ -91,42 +142,6 @@ int main(int argc, char *argv[]){
     //////////////////////////////////////////////////////////
     // bending the cylinder
 
-    Vector3d dist1 = (C.row(1) - C.row(0));
-    Vector3d dist2 = (C.row(2) - C.row(1));
-    Affine3d T1 = Affine3d::Identity();
-    Affine3d T2 = Affine3d::Identity();
-    Affine3d T3 = Affine3d::Identity();
-
-    T1.translate(dist1); 
-    T3.translate(dist2);
-    T2.rotate(euler2Quaternion(0.5*M_PI, 0.0, 0.0));
-
-    std::cout << euler2Quaternion(0.0, 0.0, 0.5*M_PI) << std::endl;
-
-    Affine3d T0 = Affine3d::Identity();
-    T0.translate(Vector3d(C.row(2)));
-    Affine3d T_ff = T1*T2*T3;
-
-    const int dim = C.cols();
-    MatrixXd T(BE.rows()*(dim+1),dim);
-    for(int e = 0;e<BE.rows();e++)
-    {
-        Affine3d a = Affine3d::Identity();
-        if (e == 1){
-            a = T_ff*T0.inverse();
-        }
-        // a.translate(vT[e]);
-        // a.rotate(vQ[e]);
-        T.block(e*(dim+1),0,dim+1,dim) =
-            a.matrix().transpose().block(0,0,dim+1,dim);
-
-    }
-    // Compute deformation via LBS as matrix multiplication
-    U = M*T;
-    MatrixXd CT;
-    MatrixXi BET;
-    igl::deform_skeleton(C,BE,T,CT,BET);
-
     // std::cout << C << std::endl;
 
     // std::cout << CT << std::endl;
@@ -136,10 +151,13 @@ int main(int argc, char *argv[]){
     igl::opengl::glfw::Viewer viewer;
     viewer.data().set_mesh(U, F);
     viewer.data().set_data(W.col(selected));
-    viewer.data().set_edges(CT,BET,sea_green);
+    viewer.data().set_edges(C,BE,sea_green);
+    viewer.callback_pre_draw = &pre_draw;
     viewer.data().show_lines = false;
     viewer.data().show_overlay_depth = false;
     viewer.data().line_width = 1;
+    viewer.core().animation_max_fps = 30.;
+    viewer.core().is_animating = true;
     viewer.launch();
 
     return 0;
