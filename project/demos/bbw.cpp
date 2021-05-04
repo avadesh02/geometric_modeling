@@ -26,20 +26,52 @@ Eigen::MatrixXd V,W,U,C,M, CT, T_mat;
 Eigen::MatrixXi T,F,BE;
 Eigen::VectorXi P;
 
-int selected = 0;
-
+std::vector<std::vector<double>> motion;
 std::vector<int> CE_ind = {633, 39664, 32904, 28716, 5931, 3569, 3632, 
                             32099, 31372, 27125, 7050, 3014, 2040};
 
 std::vector<std::string> joint_names = {"FL_HAA", "FL_KFE", "FL_FOOT", "FR_HAA" ,"FR_KFE", "FR_FOOT",
                                         "HL_HAA", "HL_KFE", "HL_FOOT", "HR_HAA", "HR_KFE", "HR_FOOT"};
-
+int k;
 Eigen::VectorXd q;
 std::string rpath = "../data/solo12.urdf";
+std::string motion_file = "../motions/jump.txt";
+
+std::vector<std::vector<double>> read_motion(std::string file_name){
+    fstream newfile;
+    newfile.open(file_name,ios::in); //open a file to perform read operation using file object
+
+    std::vector<std::vector<double>> q_vec;
+
+    if (newfile.is_open()){   //checking whether the file is open
+        string tp;
+        while(getline(newfile, tp)){ //read data from file object and put it into string.
+            vector <double> OutputVertices;
+            istringstream ss(tp);
+            copy(
+            istream_iterator <double> ( ss ),
+            istream_iterator <double> (),
+            back_inserter( OutputVertices )
+            );
+            q_vec.push_back(OutputVertices);
+        }
+        newfile.close(); //close the file object.
+    };
+
+    return q_vec;
+}
+
 
 bool pre_draw(igl::opengl::glfw::Viewer & viewer){
 
-    q[0] += 0.01;    
+    for (unsigned i = 0; i < motion[k].size(); ++i){
+        if (i < 3 || i > 6){
+            q(i) = motion[k][i];
+        }
+        // hack because of difference in co ordinate frames 
+        // of mesh and urdf
+        q(0) = motion[k][1]; q(1) = -motion[k][0];
+    }
     std::string rpath = "../data/solo12.urdf";
     fk::ForwardKinematics fk(rpath, joint_names, V, CE_ind, BE);
     MatrixXd CT(CE_ind.size(), V.cols());
@@ -48,12 +80,15 @@ bool pre_draw(igl::opengl::glfw::Viewer & viewer){
     fk.compute(q, CT, T_mat);
     U = M*T_mat;
     viewer.data().set_vertices(U);
-    viewer.data().set_edges(CT,BE,sea_green);
+    // viewer.data().set_edges(CT,BE,sea_green);
+    k = (k < motion.size() - 1 ? k + 1 : 0);
 }
 
-
-
 int main(int argc, char *argv[]){
+    
+    k = 0;
+    motion = read_motion(motion_file);
+    std::cout << "finished reading motion .." << std::endl;
 
     q.resize(19);
     q <<  0.2, 0.4, 0.24, 0.0, 0.0, -0.707107, 0.707107, 
@@ -99,12 +134,12 @@ int main(int argc, char *argv[]){
     igl::opengl::glfw::Viewer viewer;
     viewer.data().set_mesh(U, F);
     // viewer.data().set_data(W.col(selected));
-    viewer.data().set_edges(C,BE,sea_green);
+    // viewer.data().set_edges(C,BE,sea_green);
     viewer.callback_pre_draw = &pre_draw;
     viewer.data().show_lines = false;
     viewer.data().show_overlay_depth = false;
     viewer.data().line_width = 1;
-    viewer.core().animation_max_fps = 30.;
+    viewer.core().animation_max_fps = 60.;
     viewer.core().is_animating = true;
     viewer.launch();
 
