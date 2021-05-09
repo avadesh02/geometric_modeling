@@ -23,22 +23,40 @@ namespace fk{
             T_[i] = Eigen::Affine3d::Identity();
         }
         CT_ = C_;
+
+        pitch_corr = Eigen::Affine3d::Identity();
+        // used to rotate the robot urdf frame to the mesh frame for imposition
+        pitch_corr.rotate(euler2Quaternion(0, M_PI/2.0, 0));
+
     };
 
     void ForwardKinematics::get_C(Eigen::MatrixXd &C){
         C = C_;
     };
 
+    Eigen::Quaterniond ForwardKinematics::euler2Quaternion( const double roll,
+                                                            const double pitch,
+                                                            const double yaw )
+{
+    Eigen::AngleAxisd rollAngle(roll, Eigen::Vector3d::UnitX());
+    Eigen::AngleAxisd pitchAngle(pitch, Eigen::Vector3d::UnitY());
+    Eigen::AngleAxisd yawAngle(yaw, Eigen::Vector3d::UnitZ());
+
+    Eigen::Quaterniond q = yawAngle * pitchAngle * rollAngle;
+    return q;
+}
+
     void ForwardKinematics::compute(Eigen::VectorXd &q, Eigen::MatrixXd &CT, Eigen::MatrixXd &T_mat){
 
         pinocchio::forwardKinematics(rmodel_, rdata_, q);
         pinocchio::updateFramePlacements(rmodel_, rdata_);
-        
+
         CT.row(0) = C_.row(0);
         for (unsigned i = 0; i < joint_names_.size(); ++i){
             
             T_[i+1].translation() = rdata_.oMf[rmodel_.getFrameId(joint_names_[i])].translation();
-            // T_[i].rotate(rdata_.oMf[rmodel_.getFrameId(joint_names_[i])].rotation());
+            // T_[i+1].rotate(rdata_.oMf[rmodel_.getFrameId(joint_names_[i+1])].rotation());
+            T_[i+1] = pitch_corr*T_[i+1];
             CT.row(i+1) = Eigen::Vector3d(T_[i+1].translation());
             // computing the relative translation vector
             T_[i+1] = T_[i+1]*T0_[i+1].inverse();

@@ -24,6 +24,10 @@ namespace fk{
 
             void get_C(Eigen::MatrixXd &C);
 
+            Eigen::Quaterniond euler2Quaternion( const double roll,
+                                                const double pitch,
+                                                const double yaw );
+
         private:
             
             // robot model
@@ -43,6 +47,7 @@ namespace fk{
             // the current position of handles based on joint position
             // relative to the initial postion
             std::vector<Eigen::Affine3d> T_;
+            Eigen::Affine3d pitch_corr;
 
 
     };
