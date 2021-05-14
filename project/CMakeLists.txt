@@ -24,6 +24,7 @@ add_library(${PROJECT_NAME} SHARED
 target_link_libraries(${PROJECT_NAME} pinocchio::pinocchio)
 target_link_libraries(${PROJECT_NAME} igl::core igl::opengl_glfw)
 
+# demo to be run to generate animation
 add_executable(bbw ./demos/bbw.cpp)
 add_executable(bbw_cyl ./demos/bbw_cyl.cpp)
 add_executable(tmp ./demos/tmp.cpp)

@@ -1,3 +1,6 @@
+// This file computes the location of all the frames or joints based on the joint positions
+// and then updates the handle locations in a way that LBS can be carried out
+
 #include <fk.hpp>
 
 

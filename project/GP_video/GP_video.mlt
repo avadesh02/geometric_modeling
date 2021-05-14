@@ -15,18 +15,6 @@
     <property name="creation_time">2021-05-04T07:38:50</property>
     <property name="xml">was here</property>
   </chain>
-  <chain id="chain1" out="00:00:09.767">
-    <property name="length">587</property>
-    <property name="eof">pause</property>
-    <property name="resource">/home/ameduri/course_work/gp/project/results/jump.mkv</property>
-    <property name="mlt_service">avformat-novalidate</property>
-    <property name="seekable">1</property>
-    <property name="audio_index">1</property>
-    <property name="video_index">0</property>
-    <property name="mute_on_pause">0</property>
-    <property name="xml">was here</property>
-    <property name="shotcut:hash">0dde7849e35e97c394bcfb0ae83fc85e</property>
-  </chain>
   <chain id="chain2" out="00:00:09.583">
     <property name="length">576</property>
     <property name="eof">pause</property>
@@ -39,14 +27,176 @@
     <property name="xml">was here</property>
     <property name="shotcut:hash">b8a2d7f8ea64ff459cd200d9da57e5e2</property>
   </chain>
+  <producer id="producer0" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">intro-1.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T01:38:44</property>
+    <property name="shotcut:caption">intro-1.png</property>
+    <property name="shotcut:hash">c697ea5e33f4c86803075299c16355ad</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </producer>
+  <chain id="chain3" out="00:02:17.467">
+    <property name="length">8249</property>
+    <property name="eof">pause</property>
+    <property name="resource">University of Portsmouth - Dog Motion Capture.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">de27c3d1858dec4f9962c7a335f35095</property>
+  </chain>
+  <producer id="producer1" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">mot-1.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T01:54:20</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">daf7976f72f5bfe27b54f9ed736171a4</property>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">mp-1.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T02:13:45</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">dfe74ff5c31f35311e59ad45d60fbcb0</property>
+  </producer>
+  <producer id="producer3" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">prop-1.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T02:13:36</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">797d5ac0ddcaa7544e087ce560a83d6f</property>
+  </producer>
+  <chain id="chain4" out="00:05:52.167">
+    <property name="length">21131</property>
+    <property name="eof">pause</property>
+    <property name="resource">Final_Brahayam_TRO.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">e03cc28a1d498fbca7e1d612eba40f73</property>
+  </chain>
+  <chain id="chain5" out="00:00:41.833">
+    <property name="length">2511</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ameduri/course_work/gp/project/results/trot_sk.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">2f5baf3c45135d0353d58553d87f3e35</property>
+  </chain>
+  <chain id="chain6" out="00:00:20.700">
+    <property name="length">1243</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ameduri/course_work/gp/project/results/bound_sk.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">1d2e2abd2d2a6badf81ec072d58280ad</property>
+  </chain>
+  <chain id="chain7" out="00:00:10.650">
+    <property name="length">640</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ameduri/course_work/gp/project/results/jump_skl.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">9714542c2519dbddfcf4a3ce22bade42</property>
+  </chain>
+  <chain id="chain1" out="00:00:10.350">
+    <property name="length">622</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ameduri/course_work/gp/project/results/jump.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">0163a64852dc001e40a73fbccbb91d21</property>
+  </chain>
+  <chain id="chain8" out="00:00:19.417">
+    <property name="length">1166</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ameduri/course_work/gp/project/results/bound.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">e05438a82ef2422b60f2dd8fd276736d</property>
+  </chain>
+  <producer id="producer4" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">con-1.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T03:25:41</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">61f0e47b0f859e3c1c70746449e3e55a</property>
+  </producer>
   <playlist id="main_bin">
     <property name="xml_retain">1</property>
     <entry producer="chain0" in="00:00:00.000" out="00:00:23.700"/>
-    <entry producer="chain1" in="00:00:00.000" out="00:00:09.767"/>
     <entry producer="chain2" in="00:00:00.000" out="00:00:09.583"/>
+    <entry producer="producer0" in="00:00:00.000" out="00:00:03.983"/>
+    <entry producer="chain3" in="00:00:00.000" out="00:02:17.467"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:00:03.983"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:00:03.983"/>
+    <entry producer="producer3" in="00:00:00.000" out="00:00:03.983"/>
+    <entry producer="chain4" in="00:00:00.000" out="00:05:52.167"/>
+    <entry producer="chain5" in="00:00:00.000" out="00:00:41.833"/>
+    <entry producer="chain6" in="00:00:00.000" out="00:00:20.700"/>
+    <entry producer="chain7" in="00:00:00.000" out="00:00:10.650"/>
+    <entry producer="chain1" in="00:00:00.000" out="00:00:10.350"/>
+    <entry producer="chain8" in="00:00:00.000" out="00:00:19.417"/>
+    <entry producer="producer4" in="00:00:00.000" out="00:00:03.983"/>
   </playlist>
-  <producer id="black" in="00:00:00.000" out="00:00:21.833">
-    <property name="length">00:00:21.850</property>
+  <producer id="black" in="00:00:00.000" out="00:02:23.900">
+    <property name="length">00:02:23.917</property>
     <property name="eof">pause</property>
     <property name="resource">0</property>
     <property name="aspect_ratio">1</property>
@@ -55,33 +205,298 @@
     <property name="set.test_audio">0</property>
   </producer>
   <playlist id="background">
-    <entry producer="black" in="00:00:00.000" out="00:00:21.833"/>
+    <entry producer="black" in="00:00:00.000" out="00:02:23.900"/>
   </playlist>
-  <producer id="producer0" in="00:00:00.000" out="00:00:08.450">
-    <property name="length">00:00:08.467</property>
+  <producer id="producer5" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
     <property name="eof">pause</property>
-    <property name="resource">2.8:/home/ameduri/course_work/gp/project/results/trotting.mkv</property>
+    <property name="resource">intro-1.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T01:38:44</property>
+    <property name="shotcut:caption">intro-1.png</property>
+    <property name="shotcut:hash">c697ea5e33f4c86803075299c16355ad</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer6" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">mot-1.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T01:54:20</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">daf7976f72f5bfe27b54f9ed736171a4</property>
+    <property name="shotcut:caption">mot-1.png</property>
+  </producer>
+  <chain id="chain9" out="00:02:17.467">
+    <property name="length">8249</property>
+    <property name="eof">pause</property>
+    <property name="resource">University of Portsmouth - Dog Motion Capture.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">de27c3d1858dec4f9962c7a335f35095</property>
+    <property name="shotcut:caption">University of Portsmouth - Dog Motion Capture.mp4</property>
+    <filter id="filter0" in="00:00:27.550" out="00:00:36.717">
+      <property name="argument"></property>
+      <property name="geometry">43 627 1123 115 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:36pt; font-weight:600; color:#ffffff;&quot;&gt;Motion Capture system used to record dog movements  &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
+  </chain>
+  <chain id="chain10" out="00:02:17.467">
+    <property name="length">8249</property>
+    <property name="eof">pause</property>
+    <property name="resource">University of Portsmouth - Dog Motion Capture.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">de27c3d1858dec4f9962c7a335f35095</property>
+    <property name="shotcut:caption">University of Portsmouth - Dog Motion Capture.mp4</property>
+    <filter id="filter1" in="00:00:59.583" out="00:01:14.950">
+      <property name="argument"></property>
+      <property name="geometry">19 29 1240 115 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:36pt; font-weight:600; color:#ffffff;&quot;&gt;Recorded motion used along with &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:32pt; font-weight:600; color:#ffffff;&quot;&gt;Linear blend skinning to create realistic motions&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
+  </chain>
+  <producer id="producer7" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">mp-1.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T02:13:45</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">dfe74ff5c31f35311e59ad45d60fbcb0</property>
+    <property name="shotcut:caption">mp-1.png</property>
+  </producer>
+  <chain id="chain11" out="00:05:52.167">
+    <property name="length">21131</property>
+    <property name="eof">pause</property>
+    <property name="resource">Final_Brahayam_TRO.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">e03cc28a1d498fbca7e1d612eba40f73</property>
+    <property name="shotcut:caption">Final_Brahayam_TRO.mp4</property>
+    <filter id="filter2" in="00:03:11.933" out="00:03:28.200">
+      <property name="argument"></property>
+      <property name="geometry">36 629 1190 128 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:32pt; font-weight:600; color:#ffffff;&quot;&gt;Different gaits generated by the motion planner for a quadruped robot based on basic user input&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
+  </chain>
+  <chain id="chain12" out="00:05:52.167">
+    <property name="length">21131</property>
+    <property name="eof">pause</property>
+    <property name="resource">Final_Brahayam_TRO.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">e03cc28a1d498fbca7e1d612eba40f73</property>
+    <property name="shotcut:caption">Final_Brahayam_TRO.mp4</property>
+    <filter id="filter3" in="00:04:24.167" out="00:04:33.650">
+      <property name="argument"></property>
+      <property name="geometry">30 645 1219 109 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:32pt; font-weight:600; color:#ffffff;&quot;&gt;These motions are realistic enough to be tracked exactly on a real robot. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
+  </chain>
+  <producer id="producer8" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">prop-1.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T02:13:36</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">797d5ac0ddcaa7544e087ce560a83d6f</property>
+    <property name="shotcut:caption">prop-1.png</property>
+  </producer>
+  <producer id="producer9" in="00:00:00.000" out="00:00:14.933">
+    <property name="length">00:00:14.950</property>
+    <property name="eof">pause</property>
+    <property name="resource">2.8:/home/ameduri/course_work/gp/project/results/trot_sk.mkv</property>
     <property name="aspect_ratio">1</property>
     <property name="seekable">1</property>
     <property name="audio_index">1</property>
     <property name="video_index">0</property>
     <property name="mute_on_pause">1</property>
     <property name="warp_speed">2.8</property>
+    <property name="warp_resource">/home/ameduri/course_work/gp/project/results/trot_sk.mkv</property>
+    <property name="mlt_service">timewarp</property>
+    <property name="shotcut:producer">avformat</property>
+    <property name="video_delay">0</property>
+    <property name="shotcut:hash">2f5baf3c45135d0353d58553d87f3e35</property>
+    <property name="shotcut:caption">trot_sk.mkv (2.8x)</property>
+    <property name="xml">was here</property>
+    <filter id="filter4" in="00:00:06.583" out="00:00:14.933">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fill">1</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.rect">-207.268 67.0271 1699.84 1062.4 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">center</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+      <property name="transition.fix_rotate_x">90</property>
+    </filter>
+    <filter id="filter5" in="00:00:06.583" out="00:00:14.933">
+      <property name="argument"></property>
+      <property name="geometry">126 607 1041 162 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:36pt; font-weight:600; color:#ffffff;&quot;&gt;Impose skeleton constraints to overlap the mesh with a quadruped robot. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
+  </producer>
+  <producer id="producer10" in="00:00:00.000" out="00:00:09.100">
+    <property name="length">00:00:09.117</property>
+    <property name="eof">pause</property>
+    <property name="resource">2.6:/home/ameduri/course_work/gp/project/results/trotting.mkv</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">1</property>
+    <property name="warp_speed">2.6</property>
     <property name="warp_resource">/home/ameduri/course_work/gp/project/results/trotting.mkv</property>
     <property name="mlt_service">timewarp</property>
     <property name="shotcut:producer">avformat</property>
     <property name="video_delay">0</property>
-    <property name="color_range">1</property>
     <property name="shotcut:hash">b36dad22d9e63160ab0d7f95b34b9d56</property>
-    <property name="shotcut:caption">trotting.mkv (2.8x)</property>
+    <property name="shotcut:caption">trotting.mkv (2.6x)</property>
     <property name="xml">was here</property>
-    <filter id="filter0" out="00:00:08.450">
+    <filter id="filter6" out="00:00:09.100">
       <property name="background">color:#00000000</property>
       <property name="mlt_service">affine</property>
       <property name="shotcut:filter">affineSizePosition</property>
       <property name="transition.fill">1</property>
       <property name="transition.distort">0</property>
-      <property name="transition.rect">-410 -207 2085.12 1303 1</property>
+      <property name="transition.rect">-440.928 -252.597 2176 1360 1</property>
       <property name="transition.valign">middle</property>
       <property name="transition.halign">center</property>
       <property name="shotcut:animIn">00:00:00.000</property>
@@ -89,31 +504,156 @@
       <property name="transition.threads">0</property>
       <property name="transition.fix_rotate_x">90</property>
     </filter>
+    <filter id="filter7" out="00:00:09.100">
+      <property name="argument"></property>
+      <property name="geometry">32 642 1226 138 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:32pt; font-weight:600; color:#ffffff;&quot;&gt;Deform&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:36pt; font-weight:600; color:#ffffff;&quot;&gt; the mesh using BBW &amp;amp; LBS to match the skeleton motion from the robot planner.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
   </producer>
-  <producer id="producer1" in="00:00:00.000" out="00:00:03.350">
-    <property name="length">00:00:03.367</property>
+  <producer id="producer11" in="00:00:00.000" out="00:00:03.800">
+    <property name="length">00:00:03.817</property>
     <property name="eof">pause</property>
-    <property name="resource">2.9:/home/ameduri/course_work/gp/project/results/jump.mkv</property>
+    <property name="resource">2.8:/home/ameduri/course_work/gp/project/results/jump_skl.mkv</property>
     <property name="aspect_ratio">1</property>
     <property name="seekable">1</property>
     <property name="audio_index">1</property>
     <property name="video_index">0</property>
     <property name="mute_on_pause">1</property>
-    <property name="warp_speed">2.9</property>
+    <property name="warp_speed">2.8</property>
+    <property name="warp_resource">/home/ameduri/course_work/gp/project/results/jump_skl.mkv</property>
+    <property name="mlt_service">timewarp</property>
+    <property name="shotcut:producer">avformat</property>
+    <property name="video_delay">0</property>
+    <property name="shotcut:hash">9714542c2519dbddfcf4a3ce22bade42</property>
+    <property name="shotcut:caption">jump_skl.mkv (2.8x)</property>
+    <property name="xml">was here</property>
+    <filter id="filter8" out="00:00:03.800">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fill">1</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.rect">-135.072 -1.32597 1536 960 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">center</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+      <property name="transition.fix_rotate_x">90</property>
+    </filter>
+    <filter id="filter9" out="00:00:03.800">
+      <property name="argument"></property>
+      <property name="geometry">158 685 928 109 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:36pt; font-weight:600; color:#ffffff;&quot;&gt;Jumping&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:72pt; font-weight:600; color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:36pt; font-weight:600; color:#ffffff;&quot;&gt;Motion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
+  </producer>
+  <producer id="producer12" in="00:00:00.000" out="00:00:03.683">
+    <property name="length">00:00:03.700</property>
+    <property name="eof">pause</property>
+    <property name="resource">2.8:/home/ameduri/course_work/gp/project/results/jump.mkv</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">1</property>
+    <property name="warp_speed">2.8</property>
     <property name="warp_resource">/home/ameduri/course_work/gp/project/results/jump.mkv</property>
     <property name="mlt_service">timewarp</property>
     <property name="shotcut:producer">avformat</property>
     <property name="video_delay">0</property>
-    <property name="shotcut:hash">0dde7849e35e97c394bcfb0ae83fc85e</property>
-    <property name="shotcut:caption">jump.mkv (2.9x)</property>
+    <property name="shotcut:hash">0163a64852dc001e40a73fbccbb91d21</property>
+    <property name="shotcut:caption">jump.mkv (2.8x)</property>
     <property name="xml">was here</property>
-    <filter id="filter1" out="00:00:03.350">
+    <filter id="filter10" out="00:00:03.683">
+      <property name="argument"></property>
+      <property name="geometry">28 664 1211 118 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;Jumping animation without skeleton and BBW weight projection&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
+  </producer>
+  <producer id="producer13" in="00:00:00.000" out="00:00:07.383">
+    <property name="length">00:00:07.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">2.8:/home/ameduri/course_work/gp/project/results/bound_sk.mkv</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">1</property>
+    <property name="warp_speed">2.8</property>
+    <property name="warp_resource">/home/ameduri/course_work/gp/project/results/bound_sk.mkv</property>
+    <property name="mlt_service">timewarp</property>
+    <property name="shotcut:producer">avformat</property>
+    <property name="video_delay">0</property>
+    <property name="shotcut:hash">1d2e2abd2d2a6badf81ec072d58280ad</property>
+    <property name="shotcut:caption">bound_sk.mkv (2.8x)</property>
+    <property name="xml">was here</property>
+    <filter id="filter11" out="00:00:07.383">
       <property name="background">color:#00000000</property>
       <property name="mlt_service">affine</property>
       <property name="shotcut:filter">affineSizePosition</property>
       <property name="transition.fill">1</property>
       <property name="transition.distort">0</property>
-      <property name="transition.rect">133.12 183.812 1013.76 634 1</property>
+      <property name="transition.rect">-374.276 -231.16 2048 1280 1</property>
       <property name="transition.valign">middle</property>
       <property name="transition.halign">center</property>
       <property name="shotcut:animIn">00:00:00.000</property>
@@ -121,83 +661,114 @@
       <property name="transition.threads">0</property>
       <property name="transition.fix_rotate_x">90</property>
     </filter>
+    <filter id="filter12" out="00:00:07.383">
+      <property name="argument"></property>
+      <property name="geometry">68 617 1157 159 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:36pt; font-weight:600; color:#ffffff;&quot;&gt;Bounding - with BBW weight projection and skeleton baseline&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
   </producer>
-  <producer id="producer2" in="00:00:00.000" out="00:00:06.683">
-    <property name="length">00:00:06.700</property>
+  <producer id="producer14" in="00:00:00.000" out="00:00:06.917">
+    <property name="length">00:00:06.933</property>
     <property name="eof">pause</property>
-    <property name="resource">2.9:/home/ameduri/course_work/gp/project/results/bound.mkv</property>
+    <property name="resource">2.8:/home/ameduri/course_work/gp/project/results/bound.mkv</property>
     <property name="aspect_ratio">1</property>
     <property name="seekable">1</property>
     <property name="audio_index">1</property>
     <property name="video_index">0</property>
     <property name="mute_on_pause">1</property>
-    <property name="warp_speed">2.9</property>
+    <property name="warp_speed">2.8</property>
     <property name="warp_resource">/home/ameduri/course_work/gp/project/results/bound.mkv</property>
     <property name="mlt_service">timewarp</property>
     <property name="shotcut:producer">avformat</property>
     <property name="video_delay">0</property>
     <property name="shotcut:hash">e05438a82ef2422b60f2dd8fd276736d</property>
-    <property name="shotcut:caption">bound.mkv (2.9x)</property>
+    <property name="shotcut:caption">bound.mkv (2.8x)</property>
     <property name="xml">was here</property>
-    <filter id="filter2" out="00:00:06.683">
-      <property name="background">color:#00000000</property>
-      <property name="mlt_service">affine</property>
-      <property name="shotcut:filter">affineSizePosition</property>
-      <property name="transition.fill">1</property>
-      <property name="transition.distort">0</property>
-      <property name="transition.rect">-372.8 -403 2025.6 1266 1</property>
-      <property name="transition.valign">middle</property>
-      <property name="transition.halign">center</property>
+    <filter id="filter13" out="00:00:06.917">
+      <property name="argument"></property>
+      <property name="geometry">57 668 1173 119 1</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">0x000000ff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">0x00000000</property>
+      <property name="pad">0</property>
+      <property name="halign">left</property>
+      <property name="valign">top</property>
+      <property name="outline">0</property>
+      <property name="pixel_ratio">1</property>
+      <property name="mlt_service">qtext</property>
+      <property name="shotcut:filter">richText</property>
+      <property name="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Serif Bold'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;Bounding animation without BBW weight projection and skeleton baseline&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</property>
       <property name="shotcut:animIn">00:00:00.000</property>
       <property name="shotcut:animOut">00:00:00.000</property>
-      <property name="transition.threads">0</property>
-      <property name="transition.fix_rotate_x">-90</property>
     </filter>
   </producer>
-  <producer id="producer3" in="00:00:00.000" out="00:00:03.300">
-    <property name="length">00:00:03.317</property>
+  <producer id="producer15" in="00:00:00.000" out="03:59:59.983">
+    <property name="length">04:00:00.000</property>
     <property name="eof">pause</property>
-    <property name="resource">2.9:/home/ameduri/course_work/gp/project/results/rearing.mkv</property>
+    <property name="resource">con-1.png</property>
+    <property name="ttl">1</property>
     <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
     <property name="seekable">1</property>
-    <property name="audio_index">1</property>
-    <property name="video_index">0</property>
-    <property name="mute_on_pause">1</property>
-    <property name="warp_speed">2.9</property>
-    <property name="warp_resource">/home/ameduri/course_work/gp/project/results/rearing.mkv</property>
-    <property name="mlt_service">timewarp</property>
-    <property name="shotcut:producer">avformat</property>
-    <property name="video_delay">0</property>
-    <property name="shotcut:hash">b8a2d7f8ea64ff459cd200d9da57e5e2</property>
-    <property name="shotcut:caption">rearing.mkv (2.9x)</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2021-05-14T03:25:41</property>
     <property name="xml">was here</property>
-    <filter id="filter3" out="00:00:03.300">
-      <property name="background">color:#00000000</property>
-      <property name="mlt_service">affine</property>
-      <property name="shotcut:filter">affineSizePosition</property>
-      <property name="transition.fill">1</property>
-      <property name="transition.distort">0</property>
-      <property name="transition.rect">-320 2.27374e-13 1920 1200 1</property>
-      <property name="transition.valign">middle</property>
-      <property name="transition.halign">center</property>
-      <property name="shotcut:animIn">00:00:00.000</property>
-      <property name="shotcut:animOut">00:00:00.000</property>
-      <property name="transition.threads">0</property>
-      <property name="transition.fix_rotate_x">90</property>
-    </filter>
+    <property name="shotcut:hash">61f0e47b0f859e3c1c70746449e3e55a</property>
+    <property name="shotcut:caption">con-1.png</property>
   </producer>
   <playlist id="playlist0">
     <property name="shotcut:video">1</property>
     <property name="shotcut:name">V1</property>
-    <entry producer="producer0" in="00:00:00.000" out="00:00:08.450"/>
-    <entry producer="producer1" in="00:00:00.000" out="00:00:03.350"/>
-    <entry producer="producer2" in="00:00:00.000" out="00:00:06.683"/>
-    <entry producer="producer3" in="00:00:00.000" out="00:00:03.300"/>
+    <property name="shotcut:lock">0</property>
+    <entry producer="producer5" in="00:00:00.000" out="00:00:02.883"/>
+    <entry producer="producer6" in="00:00:00.000" out="00:00:10.133"/>
+    <entry producer="chain9" in="00:00:27.550" out="00:00:36.717"/>
+    <entry producer="chain10" in="00:00:59.583" out="00:01:14.950"/>
+    <entry producer="producer7" in="00:00:00.000" out="00:00:14.433"/>
+    <entry producer="chain11" in="00:03:11.933" out="00:03:28.200"/>
+    <entry producer="chain12" in="00:04:24.167" out="00:04:33.650"/>
+    <entry producer="producer8" in="00:00:00.000" out="00:00:19.750"/>
+    <entry producer="producer9" in="00:00:06.583" out="00:00:14.933"/>
+    <entry producer="producer10" in="00:00:00.000" out="00:00:09.100"/>
+    <entry producer="producer11" in="00:00:00.000" out="00:00:03.800"/>
+    <entry producer="producer12" in="00:00:00.000" out="00:00:03.683"/>
+    <entry producer="producer13" in="00:00:00.000" out="00:00:07.383"/>
+    <entry producer="producer14" in="00:00:00.000" out="00:00:06.917"/>
+    <entry producer="producer15" in="00:00:00.000" out="00:00:06.950"/>
   </playlist>
-  <tractor id="tractor0" title="Shotcut version 21.05.01" in="00:00:00.000" out="00:00:21.833">
+  <tractor id="tractor0" title="Shotcut version 21.05.01" in="00:00:00.000" out="00:02:23.900">
     <property name="shotcut">1</property>
     <property name="shotcut:projectAudioChannels">2</property>
     <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:scaleFactor">0.353</property>
     <track producer="background"/>
     <track producer="playlist0"/>
     <transition id="transition0">

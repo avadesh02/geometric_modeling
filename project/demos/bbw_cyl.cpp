@@ -1,3 +1,6 @@
+// demo to test BBW with custom FK for a cylinder mesh
+// Executable bbw_cyl can be run to see the results.
+
 #include <igl/boundary_conditions.h>
 #include <igl/readMESH.h>
 #include <igl/opengl/glfw/Viewer.h>

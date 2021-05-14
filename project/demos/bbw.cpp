@@ -1,3 +1,6 @@
+// This is the main file that generates the animation based on the input motion plan and mesh
+// The executable created is called bbw, which can be run after compiling the project.
+
 #include <igl/boundary_conditions.h>
 #include <igl/readMESH.h>
 #include <igl/opengl/glfw/Viewer.h>
@@ -27,9 +30,11 @@ Eigen::MatrixXi T,F,BE;
 Eigen::VectorXi P;
 
 std::vector<std::vector<double>> motion;
+// handles to create skeleton constraints
 std::vector<int> CE_ind = {633, 39664, 32904, 28716, 5931, 3569, 3632, 
                             32099, 31372, 27125, 7050, 3014, 2040};
 
+// joint mapping to handles (used in FK file)
 std::vector<std::string> joint_names = {"FL_HAA", "FL_KFE", "FL_FOOT", "FR_HAA" ,"FR_KFE", "FR_FOOT",
                                         "HL_HAA", "HL_KFE", "HL_FOOT", "HR_HAA", "HR_KFE", "HR_FOOT"};
 int k;
@@ -37,7 +42,8 @@ int selected = 0;
 
 Eigen::VectorXd q;
 std::string rpath = "../data/solo12.urdf";
-std::string motion_file = "../motions/bound.txt";
+// change file name to create different animations
+std::string motion_file = "../motions/trotting.txt";
 
 std::vector<std::vector<double>> read_motion(std::string file_name){
     fstream newfile;
@@ -82,7 +88,7 @@ bool pre_draw(igl::opengl::glfw::Viewer & viewer){
     fk.compute(q, CT, T_mat);
     U = M*T_mat;
     viewer.data().set_vertices(U);
-    viewer.data().set_edges(CT,BE,sea_green);
+    // viewer.data().set_edges(CT,BE,sea_green);
     k = (k < motion.size() - 1 ? k + 1 : 0);
 }
 
@@ -135,8 +141,9 @@ int main(int argc, char *argv[]){
 
     igl::opengl::glfw::Viewer viewer;
     viewer.data().set_mesh(U, F);
+    // comment to create final version of the animation
     viewer.data().set_data(W.col(selected));
-    // viewer.data().set_edges(C,BE,sea_green);
+    viewer.data().set_edges(C,BE,sea_green);
     viewer.callback_pre_draw = &pre_draw;
     viewer.data().show_lines = false;
     viewer.data().show_overlay_depth = false;
